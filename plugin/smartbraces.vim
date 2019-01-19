@@ -22,19 +22,23 @@ let s:keepcpo         = &cpo
 set cpo&vim
 " ------------------------------------------------------------------------------
 
+let g:smartbraces_map_keys = get(g: , 'smartbraces_map_keys', 1)
+
 nnoremap <silent> <Plug>(smartbraces-OpenBrace)  :<c-u>call smartbraces#OpenBrace(0)<cr>
 xnoremap <silent> <Plug>(smartbraces-OpenBrace)  :<c-u>call smartbraces#OpenBrace(1)<cr>
 onoremap <silent> <Plug>(smartbraces-OpenBrace)  :<c-u>normal <Plug>(smartbraces-OpenBrace)<CR>
 nnoremap <silent> <Plug>(smartbraces-CloseBrace) :<c-u>call smartbraces#CloseBrace(0)<cr>
 xnoremap <silent> <Plug>(smartbraces-CloseBrace) :<c-u>call smartbraces#CloseBrace(1)<cr>
-onoremap <silent> <Plug>(smartbraces-CloseBrace)  :<c-u>normal <Plug>(smartbraces-CloseBrace)<CR>
+onoremap <silent> <Plug>(smartbraces-CloseBrace) :<c-u>normal <Plug>(smartbraces-CloseBrace)<CR>
 
-silent! nmap <unique> {  <Plug>(smartbraces-OpenBrace)
-silent! xmap <unique> {  <Plug>(smartbraces-OpenBrace)
-silent! omap <unique> {  <Plug>(smartbraces-OpenBrace)
-silent! nmap <unique> }  <Plug>(smartbraces-CloseBrace)
-silent! xmap <unique> }  <Plug>(smartbraces-CloseBrace)
-silent! omap <unique> }  <Plug>(smartbraces-CloseBrace)
+if g:smartbraces_map_keys == 1
+  silent! nmap <unique> {  <Plug>(smartbraces-OpenBrace)
+  silent! xmap <unique> {  <Plug>(smartbraces-OpenBrace)
+  silent! omap <unique> {  <Plug>(smartbraces-OpenBrace)
+  silent! nmap <unique> }  <Plug>(smartbraces-CloseBrace)
+  silent! xmap <unique> }  <Plug>(smartbraces-CloseBrace)
+  silent! omap <unique> }  <Plug>(smartbraces-CloseBrace)
+endif
 
 " ------------------------------------------------------------------------------
 let &cpo= s:keepcpo

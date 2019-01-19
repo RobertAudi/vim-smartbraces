@@ -5,6 +5,7 @@ CONTENTS                                                        *smartbraces*
 
   Introduction ................. |smartbraces-introduction|
   Mappings ..................... |smartbraces-mappings|
+  Options ...................... |smartbraces-options|
 
 ===========================================================================
 INTRODUCTION                                       *smartbraces-introduction*
@@ -16,6 +17,11 @@ of the current paragraph.
 ===========================================================================
 MAPPINGS                                               *smartbraces-mappings*
 
+You can disable all these mappings with:
+>
+    let g:smartbraces_map_keys = 0
+<
+
 The following mappings with the following default values are available:
 >
   nmap {  <Plug>(smartbraces-OpenBrace)
@@ -25,5 +31,14 @@ The following mappings with the following default values are available:
   xmap }  <Plug>(smartbraces-CloseBrace)
   omap }  <Plug>(smartbraces-CloseBrace)
 <
+
+===========================================================================
+OPTIONS                                                 *smartbraces-options*
+
+                                                     *g:smartbraces_map_keys*
+Default: 1
+
+Controls whether or not the plugin provides mappings.
+See |smartbraces-mapppings|.
 
 vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl
