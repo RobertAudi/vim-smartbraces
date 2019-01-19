@@ -1,16 +1,20 @@
-          SmartBraces, Brace Movement Optimization *SmartBraces* *smartbraces*
+*smartbraces.txt*                    SmartBraces, Brace Movement Optimization
 
 ===========================================================================
-0. Introduction ~
-                                          *SmartBraces-intro* *smartbraces-intro*
+CONTENTS                                                        *smartbraces*
+
+  Introduction ................. |smartbraces-introduction|
+  Mappings ..................... |smartbraces-mappings|
+
+===========================================================================
+INTRODUCTION                                       *smartbraces-introduction*
 
 This Vim plug-in makes `{` and `}` jump to the beginning respectively
 end (instead of, by default, the first empty line before respectively)
 of the current paragraph.
 
 ===========================================================================
-1. Config ~
-                                        *FastFold-config* *fastfold-config*
+MAPPINGS                                               *smartbraces-mappings*
 
 The following mappings with the following default values are available:
 >
